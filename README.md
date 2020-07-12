@@ -2,7 +2,7 @@
 **Этот репозиторий будет удален сразу после получения обратной связи от Mindbox.**
 
 ## 1. Покажи результат. 
-Ссылка на решение в sqlfiddle: [http://sqlfiddle.com/#!18/be483/5](http://sqlfiddle.com/#!18/be483/5)
+Ссылка на решение в sqlfiddle: [http://sqlfiddle.com/#!18/17e318/1](http://sqlfiddle.com/#!18/17e318/1)
 
 
 ## 2. Создадим простейшую структуру из двух таблиц
@@ -21,6 +21,8 @@ CREATE TABLE Orders (
     CONSTRAINT FK_Clients_Id FOREIGN KEY (ClientId) REFERENCES Clients (Id) -- FK на клиентов. Все по-честному.
 )
 GO
+
+CREATE NONCLUSTERED INDEX IDX_Orders_ClientId ON Orders (ClientId ASC)
 ```
 
 
